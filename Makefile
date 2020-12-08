@@ -9,7 +9,7 @@ CURRENT_PHP_VERSION =
 
 DIR = .
 FILE = Dockerfile
-IMAGE = cytopia/php-cs-fixer
+IMAGE = wyster/php-cs-fixer
 TAG = latest
 
 PHP = latest
@@ -25,7 +25,7 @@ else
 endif
 else
 ifeq ($(PHP),latest)
-	docker build --build-arg PHP=7-cli-alpine --build-arg PCF=$(PCF) -t $(IMAGE) -f $(DIR)/$(FILE) $(DIR)
+	docker build --build-arg PHP=8-cli-alpine --build-arg PCF=$(PCF) -t $(IMAGE) -f $(DIR)/$(FILE) $(DIR)
 else
 	docker build --build-arg PHP=$(PHP)-cli-alpine --build-arg PCF=$(PCF) -t $(IMAGE) -f $(DIR)/$(FILE) $(DIR)
 endif
@@ -41,7 +41,7 @@ else
 endif
 else
 ifeq ($(PHP),latest)
-	docker build --no-cache --build-arg PHP=7-cli-alpine --build-arg PCF=$(PCF) -t $(IMAGE) -f $(DIR)/$(FILE) $(DIR)
+	docker build --no-cache --build-arg PHP=8-cli-alpine --build-arg PCF=$(PCF) -t $(IMAGE) -f $(DIR)/$(FILE) $(DIR)
 else
 	docker build --no-cache --build-arg PHP=$(PHP)-cli-alpine --build-arg PCF=$(PCF) -t $(IMAGE) -f $(DIR)/$(FILE) $(DIR)
 endif
