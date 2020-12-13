@@ -9,7 +9,7 @@ on:
     - cron: '0 0 * * *'
 
   pull_request:
-    branches: [ master ]
+    branches: [ 'feature/test-pr' ]
 
 jobs:
   lint:
