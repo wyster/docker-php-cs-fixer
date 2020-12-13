@@ -3,6 +3,7 @@ name: Build and Push Docker images to Docker Hub
 on:
   push:
     branches: [ '**' ]
+    tags: [ '*' ]
 
   schedule:
     - cron: '0 0 * * *'
