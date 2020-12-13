@@ -32,5 +32,5 @@ elif [[ ${BRANCH} =~ ^(release-[.0-9]+)$ ]]; then
     fi
   fi
 else
-  echo "Skipping branch ${BRANCH}"
+  echo "Skipping branch ${BRANCH}, test"
 fi
