@@ -11,7 +11,7 @@ if [ -n "${TAG}" ]; then
       make push TAG="${PCF}-php${PHP}-${TAG}"
     fi
   fi
-elif [ "${BRANCH}" == "master" ]; then
+elif [ "${BRANCH}" == "feature/actions" ]; then
   if [ "${PCF}" == "latest" ] && [ "${PHP}" == "latest" ]; then
     make push TAG=latest
   else
