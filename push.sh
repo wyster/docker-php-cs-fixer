@@ -18,7 +18,7 @@ elif [ "${BRANCH}" == "feature/actions" ]; then
     if [ "${PHP}" == "latest" ]; then
       make push TAG=${PCF}
     else
-      push TAG=${PCF}-php${PHP}
+      make push TAG=${PCF}-php${PHP}
     fi
   fi
 elif [[ ${BRANCH} =~ ^(release-[.0-9]+)$ ]]; then
